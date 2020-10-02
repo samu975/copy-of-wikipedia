@@ -31,41 +31,33 @@
 .icon-search:before {
   content: "\e902";
 }
+*{
+  font-size: 16px;
+}
 
 h1 {
   font-family: Hoefler Text;
   text-transform: uppercase;
   text-align: center;
-  font-size: 27px;
+  font-size: 2rem;
   font-weight: bold;
   margin-top: 55px;
   margin-bottom: 0;
 }
 
 h1 span {
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 15px;
+  font-size: 1.125rem;
   font-weight: lighter;
   text-align: center;
   margin-top: 0;
 }
 
-main .main-logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 15px;
-  margin-top: 90px;
-}
 .idiom-title:hover{
   text-decoration: underline;
-  
 }
 .languaje-page{
   cursor: pointer;
@@ -75,71 +67,72 @@ main .main-logo {
   text-decoration: underline;
 }
 .languajes {
-  height: 300px;
+  display: grid;
+  grid-template-columns:[inicio] 1fr [linea2] 0.3fr[linea3] 1fr[fianl];
+  grid-template-rows: [inicio] 60px [linea2] 60px [linea3] 60px [linea4] 60px [linea5] 60px [final];
+  row-gap: 1.5rem;
 }
+main .main-logo {
+  max-height: 200px;
+  grid-column: linea2 / linea3;
+  grid-row: linea2 / linea5 ;
+  margin: 0;
+  justify-self: center;
+}
+main .main-logo img{
+
+  width: 100%;
+}
+main div strong{
+  font-size: 1.2rem;
+}
+main div a p {
+  font-size: 1rem;
+  color: #565b5f;
+  font-weight: normal;
+}
+
 main div #español {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transform: translateX(-175px) translatey(-311px);
-          transform: translateX(-175px) translatey(-311px);
-  margin-top: 60px;
+  justify-self: flex-end;
   text-align: center;
+  grid-row: inicio/linea2;
+  grid-template-columns: inicio/linea2;
+  position: relative;
+  left: 3.5rem;
 }
 
-
-
-main div #español a {
+main div #español a{
   text-decoration: none;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 18px;
   color: #3366cc;
+  
 }
 
-main div #español a p {
-  font-size: 14px;
-  color: #565b5f;
-}
-
-main div #ingles {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transform: translateX(162px) translatey(-419px);
-          transform: translateX(162px) translatey(-419px);
-  margin-top: 60px;
+#ingles{
+  grid-row: inicio/linea2;
+  grid-column: linea3/linea4;
+  justify-self: flex-start;
+  position: relative;
+  right: 3.5rem;
   text-align: center;
 }
-
 main div #ingles a {
+  
   text-decoration: none;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 18px;
   color: #3366cc;
-}
-
-main div #ingles a p {
-  font-size: 14px;
-  color: #565b5f;
 }
 
 main div #aleman {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transform: translateX(218px) translatey(-460px);
-          transform: translateX(218px) translatey(-460px);
-  margin-top: 60px;
+  grid-row: linea2/linea3;
+  grid-column: linea3/linea4;
+  justify-self: flex-start;
+  position: relative;
+  left: 1rem;
   text-align: center;
+  
 }
 
 main div #aleman a {
@@ -149,21 +142,12 @@ main div #aleman a {
   color: #3366cc;
 }
 
-main div #aleman a p {
-  font-size: 14px;
-  color: #565b5f;
-}
-
 main div #frances {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transform: translateX(229px) translatey(-497px);
-          transform: translateX(229px) translatey(-497px);
-  margin-top: 60px;
+  grid-row: linea3/linea4;
+  grid-column: linea3/linea4;
+  justify-self: flex-start;
+  position: relative;
+  left: 2rem;
   text-align: center;
 }
 
@@ -174,22 +158,14 @@ main div #frances a {
   color: #3366cc;
 }
 
-main div #frances a p {
-  font-size: 14px;
-  color: #565b5f;
-}
-
 main div #chino {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transform: translateX(218px) translatey(-530px);
-          transform: translateX(218px) translatey(-530px);
-  margin-top: 60px;
+  grid-row: linea4/linea5;
+  grid-column: linea3/linea4;
+  justify-self: flex-start;
+  position: relative;
+  left: 1rem;
   text-align: center;
+  
 }
 
 main div #chino a {
@@ -199,23 +175,13 @@ main div #chino a {
   font-weight: bold;
   color: #3366cc;
 }
-
-main div #chino a p {
-  font-size: 14px;
-  color: #565b5f;
-  font-weight: normal;
-}
-
 main div #polaco {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transform: translateX(164px) translatey(-571px);
-          transform: translateX(164px) translatey(-571px);
-  margin-top: 60px;
+  justify-self: flex-start;
+  grid-row: linea5/linea6;
+  grid-column: linea3/linea4;
+  justify-self: flex-start;
+  position: relative;
+  right: 3.5rem;
   text-align: center;
 }
 
@@ -226,22 +192,12 @@ main div #polaco a {
   color: #3366cc;
 }
 
-main div #polaco a p {
-  font-size: 14px;
-  color: #565b5f;
-  font-weight: normal;
-}
-
 main div #japones {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transform: translateX(-232px) translatey(-1234px);
-          transform: translateX(-232px) translatey(-1234px);
-  margin-top: 60px;
+  grid-row: linea2/linea3;
+  grid-column: inicio/linea2;
+  justify-self: flex-end;
+  position: relative;
+  right: 1.8rem;
   text-align: center;
 }
 
@@ -252,21 +208,13 @@ main div #japones a {
   color: #3366cc;
 }
 
-main div #japones a p {
-  font-size: 14px;
-  color: #565b5f;
-}
-
 main div #ruso {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transform: translateX(-246px) translatey(-1055px);
-          transform: translateX(-246px) translatey(-1055px);
-  margin-top: 60px;
+  justify-self: flex-end;
+  grid-row: linea3/linea4;
+  grid-column: inicio/linea2;
+  justify-self: flex-end;
+  position: relative;
+  right: 2rem;
   text-align: center;
 }
 
@@ -277,21 +225,10 @@ main div #ruso a {
   color: #3366cc;
 }
 
-main div #ruso a p {
-  font-size: 14px;
-  color: #565b5f;
-}
-
 main div #italiano {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transform: translateX(-230px) translatey(-874px);
-          transform: translateX(-230px) translatey(-874px);
-  margin-top: 60px;
+  justify-self: flex-end;
+  grid-row: linea4/linea5;
+  grid-column: inicio/linea2;
   text-align: center;
 }
 
@@ -302,21 +239,13 @@ main div #italiano a {
   color: #3366cc;
 }
 
-main div #italiano a p {
-  font-size: 14px;
-  color: #565b5f;
-}
-
 main div #portugues {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transform: translateX(-174px) translatey(-693px);
-          transform: translateX(-174px) translatey(-693px);
-  margin-top: 60px;
+  justify-self: flex-end;
+  grid-row: linea5/linea6;
+  grid-column: inicio/linea2;
+  justify-self: flex-end;
+  position: relative;
+  left: 3.5rem;
   text-align: center;
 }
 
@@ -325,11 +254,6 @@ main div #portugues a {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 18px;
   color: #3366cc;
-}
-
-main div #portugues a p {
-  font-size: 14px;
-  color: #565b5f;
 }
 
 p {
@@ -345,6 +269,7 @@ p {
 }
 
 main .main-input {
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
