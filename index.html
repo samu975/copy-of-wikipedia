@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wikipedia</title>
+    <title>  Wikipedia</title>
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="css/estilos.css" />
     <link rel="icon" href="./images/wikipedia.png" />
@@ -11,16 +11,19 @@
   </head>
   <body>
     <header>
-      <nav>
-        <h1><span>W</span>ikipedi<span>a</span></h1>
+      <nav class="title-container-first">
+        
+        <span><img class="title-image" src="https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png" alt=""></span><h1><span>W</span>ikipedi<span>a</span></h1>
         <h2>La enciclopedia libre</h2>
       </nav>
     </header>
     <main>
+
+<!-- -------------empieza la seccion de los idiomas ---------- -->
       <section class="center-page">
         <div class="languajes">
           <figure class="main-logo">
-            <img
+            <img class="wikipedia-logo-principal"
               src="https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png"
               alt=""
             />
@@ -89,7 +92,10 @@
           </div>
         </div>
       </section>
+<!-- --------------Acaba seccion de los idiomas ---------------------- -->
+      <!-- ----------------------- section de input -----------  -->
       <section class="main-input">
+        
         <div class="main-input-container">
           <input type="text" />
           <div class="styled-select js-enabled">
@@ -153,6 +159,8 @@
           </div>
         </div>
       </section>
+      <!-- ----------------------------- aqui acaba la section del imput------ -->
+ <!-- ---------------------boton de traducir ------------------ -->
       <section class="translate-section">
         <div class="translate">
           <button class="traslate-button">
@@ -164,6 +172,7 @@
         </div>
       </section>
       <hr>
+  <!------------------ acaba boton de traducir-----------  -->
       <section class="other-links">
         <aside class="aside-links">
           <div class="other-links-icon">
@@ -185,7 +194,7 @@
               <li>
                 <figure><a
                   href="https://play.google.com/store/apps/details?id=org.wikipedia&referrer=utm_source%3Dportal%26utm_medium%3Dbutton%26anid%3Dadmob"
-                ></a><img src="./images/google-play-icon.PNG" alt="play-store-icon"></figure> 
+                ></a><img  src="./images/google-play-icon.PNG" alt="play-store-icon"></figure> 
               </li>
               <li>
                 <figure><a href="https://apps.apple.com/app/apple-store/id324715238"
@@ -316,9 +325,9 @@
       <div class="downloads-container-buttons">
         <a
           href="https://play.google.com/store/apps/details?id=org.wikipedia&referrer=utm_source%3Dportal%26utm_medium%3Dbutton%26anid%3Dadmob"
-        ></a><img src="./images/google-play-icon.PNG" alt="play-store-icon">
+        ></a><img class="play-store-image" src="./images/google-play-icon.PNG" alt="play-store-icon">
         <a href="https://apps.apple.com/app/apple-store/id324715238"
-          ></a><img src="./images/appstore-icon.PNG" alt="">
+          ></a><img class="apple-store-image" src="./images/appstore-icon.PNG" alt="">
       </div>
     </div>
     <footer>
