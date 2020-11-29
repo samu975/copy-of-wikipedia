@@ -59,13 +59,7 @@ h2 {
 .idiom-title:hover{
   text-decoration: underline;
 }
-.languaje-page{
-  cursor: pointer;
-}
 
-.languaje-page:hover{
-  text-decoration: underline;
-}
 .languajes {
   display: grid;
   grid-template-columns:[inicio] 1fr [linea2] 0.3fr[linea3] 1fr[fianl];
@@ -550,4 +544,3 @@ footer ul,li{
   bottom: 3.5px;
   margin-right: 10px;
 }
-/*# sourceMappingURL=estilos.css.map */
